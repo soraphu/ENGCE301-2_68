@@ -10,7 +10,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #cacaca;
 }
 
 h1, h2, h3 {
@@ -25,9 +25,10 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 3px solid #3498db;
+    border-bottom: 3px solid rgb(79, 79, 79);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease ;
 }
 
 h3 {
@@ -42,7 +43,7 @@ p {
 
 /* Header Styling */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #222222 0%, #3b3a3a 100%);
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -74,7 +75,7 @@ nav a {
 
 nav a:hover {
     background-color: white;
-    color: #667eea;
+    color: #000000;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -87,7 +88,7 @@ main {
 }
 
 section {
-    background: white;
+    background: rgb(246, 246, 246);
     margin-bottom: 3rem;
     padding: 2.5rem;
     border-radius: 10px;
@@ -103,7 +104,6 @@ section:hover {
 /* Profile Image */
 #about img {
     border-radius: 50%;
-    border: 5px solid #3498db;
     margin-bottom: 1.5rem;
     display: block;
     margin-left: auto;
@@ -139,22 +139,25 @@ a:hover {
 
 /* Contact Section Special Styling */
 #contact {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #007ea8 0%, #0c0032 100%);
     color: white;
 }
 
 #contact h2 {
     color: white;
-    border-bottom-color: white;
+    border-bottom-color: rgb(255, 255, 255) ;
 }
 
 #contact a {
     color: white;
-    font-weight: bold;
 }
 
 #contact a:hover {
-    color: #f8f9fa;
+    color: #fff700;
+}
+
+#contact strong {
+    color: white;
 }
 
 /* Footer */
@@ -173,15 +176,42 @@ footer p {
 
 /* Color Variations for Sections */
 #education {
-    border-left: 5px solid #e74c3c;
+    border-left: 5px solid #22ff00;
+    transition: transform 0.3s ease ;
 }
 
 #hobbies {
-    border-left: 5px solid #f39c12;
+    border-left: 5px solid #1e00ff;
+    transition: transform 0.3s ease ;
 }
 
 #about {
-    border-left: 5px solid #27ae60;
+    border-left: 5px solid #ff0000;
+    transition: transform 0.3s ease ;
+}
+
+#about:hover h2 {
+    color: red ;
+    border-bottom: 3px solid red;
+}
+
+#about:hover img {
+    transition: transform 0.3s ease ;
+    transform: translateY(-10px) ;
+}
+
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#education:hover h2 {
+    color: rgb(0, 219, 0) ;
+    border-bottom: 3px solid rgb(0, 219, 0);
+}
+
+#hobbies:hover h2 {
+    color: blue ;
+    border-bottom: 3px solid blue;
 }
 
 /* Hover Effects */
@@ -190,7 +220,7 @@ section h2 {
 }
 
 section:hover h2 {
-    color: #3498db;
+    color: #000000;
 }
 
 /* Smooth Scrolling */
