@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 – Persona Dashboard (Starter)</title>
+
+    <!-- TODO: นักศึกษาสามารถเปลี่ยนฟอนต์ตามชอบ เช่น Google Fonts -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        TODO: ส่วนนี้ให้เขียนใน README.md แยกต่างหาก
+        - อธิบาย Persona (ชื่อ, อายุ, อาชีพ, Goals, Pain Points)
+        - อธิบายว่าหน้าเว็บนี้ตอบโจทย์ Persona อย่างไร
+    -->
+
+    <header class="site-header">
+        <div class="logo-area">
+            <!-- TODO: เปลี่ยนชื่อระบบ/โลโก้ให้เข้ากับ Persona -->
+            <h1>Persona Dashboard</h1>
+            <p class="tagline">สรุปทุกอย่างในหน้าเดียวสำหรับผู้ใช้ของคุณ</p>
+        </div>
+
+        <nav class="main-nav">
+            <!-- 
+                TODO: ปรับชื่อเมนูให้เข้ากับ Persona
+                เช่น "วันนี้", "งานที่ต้องทำ", "สถิติ", "ประวัติ", ฯลฯ
+            -->
+            <a href="#today">วันนี้</a>
+            <a href="#tasks">งานของฉัน</a>
+            <a href="#extra">ข้อมูลอื่น ๆ</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: ภาพรวมวันนี้ / Overview -->
+        <section id="today" class="section section-today">
+            <header class="section-header">
+                <h2>ภาพรวมกิจกรรม</h2>
+                <!-- TODO: สรุปสั้น ๆ ว่า Persona สนใจอะไรเป็นอันดับแรก -->
+                <p class="section-subtitle">
+                    สรุปข้อมูลที่สำคัญที่สุดที่ Persona อยากเห็นเมื่อเปิดเว็บนี้
+                </p>
+            </header>
+
+            <div class="cards-row">
+                <!-- 
+                    TODO: ให้นักศึกษาเปลี่ยนเนื้อหาในแต่ละ .card 
+                    ให้ตรงกับ persona ของกลุ่มตัวเอง
+                -->
+                <article class="card">
+                    <h3>ข้อมูลกิจกรรม</h3>
+                    <p>กิจกรรมเปิดใหม่ : 3 กิจกรรม</p>
+                    <p>กิจกรรมที่จัดวันนี้ : 1 กิจกรรม</p>
+                    <p>กิจกรรมบังคับ : 1 กิจกรรม</p>
+                    <!-- TODO: เปลี่ยนข้อมูลเป็นของ Persona -->
+                </article>
+
+                <article class="card">
+                    <h3>กิจกรรมที่ต้องจัดในสัปดาห์นี้</h3>
+                    <p>อบรม Cyber Security : วันที่ 20 ธันวาคม 2568</p>
+                    <p>คริสต์มาส 2568 : วันที่ 17 ธันวาคม 2568</p>
+                    <!-- TODO: ปรับให้ตรงกับชีวิตจริงของ Persona -->
+                </article>
+
+                <article class="card">
+                    <h3>ผลตอบรับการจัดกิจกรรม</h3>
+                    <p>กิจกรรมล่าสุด : ถูกใจ 80%</p>
+                    <p>ทุกกิจกรรม : ถูกใจ 71%</p>
+                    <!-- TODO: อาจเปลี่ยนเป็นกราฟแท่ง/แถบ progress bar ในเวอร์ชันถัดไป -->
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: งานที่ต้องทำ / Tasks -->
+        <section id="tasks" class="section section-tasks">
+            <header class="section-header">
+                <h2>การร้องขอจัดกิจกรรม</h2>
+                <p class="section-subtitle">
+                    สถานะกิจกรรมที่ Persona ร้องขอจัด 
+                </p>
+            </header>
+
+            <!-- 
+                TODO: เลือกว่าจะใช้ <ul>, <ol> หรือ <table> ตามลักษณะข้อมูล
+                และให้นักศึกษาออกแบบรูปแบบข้อมูลเอง
+            -->
+            <div class="tasks-layout">
+                <div class="tasks-list">
+                    <h3>Suggesting Event Status :</h3>
+                    <ul>
+                        <li>( ตัวอย่าง ) รับน้อง 2568 : รอตรวจสอบ</li>
+                        <li>( ตัวอย่าง ) งานคริสต์มาส 2568 : อนุมัติ</li>
+                        <li>( ตัวอย่าง ) อบรม Cyber Security : อนุมัติ</li>
+                        <!-- TODO: เปลี่ยนรายการเป็นงานจริงของ Persona -->
+                    </ul>
+                </div>
+
+                <div class="tasks-table-wrapper">
+                    <h3>ตารางรายละเอียด (ตัวอย่าง)</h3>
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th>ชื่อกิจกรรม</th>
+                                <th>เวลาจัด</th>
+                                <th>รายละเอียด</th>
+                                <th>สถานะ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>รับน้อง 2568</td>
+                                <td>5/12/2568 7:00 - 16:00</td>
+                                <td>กิจกรรมรับน้องปี 2568 แผนก วิศกรรมคอมพิวเตอร์</td>
+                                <td>กำลังทำ</td>
+                            </tr>
+                            <tr>
+                                <td>อ่านทบทวน Design Principles</td>
+                                <td>5/12/2568 7:00 - 16:00</td>
+                                <td>ยังไม่ได้เริ่ม</td>
+                                <td>ยังไม่ได้เริ่ม</td>
+                            </tr>
+                            <tr>
+                                <td>นัดหมายปรึกษาโปรเจกต์</td>
+                                <td>ศุกร์หน้า</td>
+                                <td>จองเวลาแล้ว</td>
+                                <td>จองเวลาแล้ว</td>
+                            </tr>
+                            <!-- TODO: ปรับข้อมูลตารางให้เข้ากับ Persona -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: ข้อมูลเสริม / Extra Info -->
+        <section id="extra" class="section section-extra">
+            <header class="section-header">
+                <h2>ข้อมูลอื่น ๆ ที่ Persona สนใจ</h2>
+                <p class="section-subtitle">
+                    ส่วนนี้ให้นักศึกษาออกแบบเองว่าจะใส่อะไร เช่น ข่าว, ลิงก์, สรุปคะแนน, แผนระยะยาว ฯลฯ
+                </p>
+            </header>
+
+            <div class="extra-layout">
+                <article class="card">
+                    <h3>ตัวอย่าง: Tips ประจำวัน</h3>
+                    <p>
+                        "แบ่งเวลาทำงานเป็นช่วงละ 25 นาที แล้วพัก 5 นาที (เทคนิค Pomodoro)"
+                    </p>
+                    <!-- TODO: เปลี่ยนเป็น Tips ที่ตรงกับวิธีการทำงานของ Persona -->
+                </article>
+
+                <article class="card">
+                    <h3>ตัวอย่าง: ลิงก์ที่ใช้บ่อย</h3>
+                    <ul>
+                        <li><a href="#">ระบบจัดการเรียน</a></li>
+                        <li><a href="#">Google Calendar</a></li>
+                        <li><a href="#">GitHub Repository</a></li>
+                        <!-- TODO: เปลี่ยนลิงก์ให้ตรงกับของจริงที่ Persona ใช้ -->
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- TODO: ปรับข้อความ footer ตามที่กลุ่มต้องการ -->
+        <p>สร้างเพื่อ ENGCE301 – Week 4 LAB (HTML, CSS &amp; Responsive Design)</p>
+    </footer>
+
+    <!-- 
+        TODO (เสริม): 
+        - นักศึกษาอาจเพิ่มปุ่มกลับขึ้นด้านบน
+        - หรือส่วนสรุป Persona อย่างสั้น ๆ ใน footer หรือ sidebar
+    -->
+</body>
+</html>
