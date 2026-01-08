@@ -57,17 +57,15 @@ class ProductController {
     // ⚠️ นักศึกษาเติมโค้ด
     static async createProduct(req, res) {
         try {
-            // TODO: รับข้อมูลจาก req.body
+            // Validate using helper method
+            await ProductService.validateProductData(productData);
             
-            
-            // TODO: เรียก Service
-            
-            
-            // TODO: ส่ง Response (201 Created)
-            
+            // Create product
+            const newProduct = await ProductService.createProduct(productData);
+            return newProduct ;
         } catch (error) {
-            // TODO: Error handling
-        }
+            throw new Error(`Failed to create product: ${error.message}`);
+        }//try, catch:
     }
     
     // ===== UPDATE =====
@@ -75,11 +73,10 @@ class ProductController {
     static async updateProduct(req, res) {
         try {
             // TODO: เขียนโค้ดทั้งหมด
-            
-            
-            
+            ProductDB.update(  ) ;
         } catch (error) {
             // TODO: Error handling
+            throw new Error(`Failed to update product: ${error.message}`);
         }
     }
     
@@ -88,11 +85,11 @@ class ProductController {
     static async deleteProduct(req, res) {
         try {
             // TODO: เขียนโค้ดทั้งหมด
-            
-            
-            
+            ProductService.deleteProduct( req ) ;
+            return "Product deleted" ;
         } catch (error) {
             // TODO: Error handling
+            throw new Error(`Failed to delete product: ${error.message}`);
         }
     }
 
