@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone plus plus",
+    "category": "Electronics",
+    "price": 4500,
+    "stock": 32,
+    "description": "iPhone GaN"
+  },
+  {
+    "id": 2,
+    "name": "MacBook Air M2",
+    "category": "Electronics",
+    "price": 39900,
+    "stock": 8,
+    "description": "13-inch MacBook Air with M2 chip"
+  },
+  {
+    "id": 3,
+    "name": "AirPods Pro",
+    "category": "Electronics",
+    "price": 8990,
+    "stock": 25,
+    "description": "Active Noise Cancellation"
+  },
+  {
+    "id": 4,
+    "name": "Laptop",
+    "category": "Electronics",
+    "price": 32000,
+    "stock": 17,
+    "description": "Aspire 5"
+  },
+  {
+    "id": 5,
+    "name": "Tab S9",
+    "category": "Electronics",
+    "price": 9999,
+    "stock": 2,
+    "description": "For student"
+  }
+]
