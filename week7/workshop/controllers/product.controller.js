@@ -66,7 +66,7 @@ class ProductController {
             return newProduct ;
         } catch (error) {
             throw new Error(`Failed to create product: ${error.message}`);
-        }//try, catch:
+        }
     }
     
     // ===== UPDATE =====
