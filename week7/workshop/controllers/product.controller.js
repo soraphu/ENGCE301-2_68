@@ -57,6 +57,7 @@ class ProductController {
     // ⚠️ นักศึกษาเติมโค้ด
     static async createProduct(req, res) {
         try {
+            const productData = req.body ;
             // Validate using helper method
             await ProductService.validateProductData(productData);
             
@@ -72,6 +73,8 @@ class ProductController {
     // ⚠️ นักศึกษาเติมโค้ดทั้งหมด
     static async updateProduct(req, res) {
         try {
+            const { id } = req.params ;
+            const data = req.body ;
             // TODO: เขียนโค้ดทั้งหมด
             ProductDB.update(  ) ;
         } catch (error) {
@@ -84,8 +87,9 @@ class ProductController {
     // ⚠️ นักศึกษาเติมโค้ดทั้งหมด
     static async deleteProduct(req, res) {
         try {
+            const id = req.params ;
             // TODO: เขียนโค้ดทั้งหมด
-            ProductService.deleteProduct( req ) ;
+            ProductService.deleteProduct( id ) ;
             return "Product deleted" ;
         } catch (error) {
             // TODO: Error handling
@@ -98,7 +102,6 @@ class ProductController {
     static async searchProducts(req, res) {
         try {
             const { q } = req.query;
-
             if (!q) {
                 return res.status(400).json({
                     success: false,

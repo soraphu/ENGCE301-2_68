@@ -18,15 +18,15 @@ router.get('/search', ProductController.searchProducts);
 router.get('/:id', ProductController.getProductById);
 
 // POST /api/products - Create product
-// // ⚠️ นักศึกษาเติม
-// router.post( '', ProductController );
+// ⚠️ นักศึกษาเติม
+router.post( '/', ProductController.createProduct );
 
-// // PUT /api/products/:id - Update product
-// // ⚠️ นักศึกษาเติม
-// router.put( '', ProductController );
+// PUT /api/products/:id - Update product
+// ⚠️ นักศึกษาเติม
+router.put( '/:id', ProductController.updateProduct );
 
-// // DELETE /api/products/:id - Delete product
-// // ⚠️ นักศึกษาเติม
-// router.delete( '', ProductController );
+// DELETE /api/products/:id - Delete product
+// ⚠️ นักศึกษาเติม
+router.delete( '/:id', ProductController.deleteProduct );
 
 module.exports = router;
